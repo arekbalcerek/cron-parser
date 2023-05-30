@@ -6,9 +6,9 @@ import java.util.stream.IntStream;
 
 class Range implements Expression {
 
-    private int lower;
-    private int upper;
-    private Integer step;
+    private final int lower;
+    private final int upper;
+    private final Integer step;
 
     public Range(int lower, int upper, Integer step) {
         if (lower > upper) {

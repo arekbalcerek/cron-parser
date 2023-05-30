@@ -6,8 +6,8 @@ import java.util.stream.IntStream;
 
 class Constant implements Expression{
 
-    private int value;
-    private Integer step;
+    private final int value;
+    private final Integer step;
 
     public Constant(int value, Integer step) {
         this.value = value;

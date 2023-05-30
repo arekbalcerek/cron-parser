@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Parser {
 
-    private String input;
+    private final String input;
     private int position;
 
     public Parser(String input) {

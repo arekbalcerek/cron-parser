@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 
 class Asterisk implements Expression{
 
-    private Integer step;
+    private final Integer step;
 
     public Asterisk(Integer step) {
         this.step = step;
