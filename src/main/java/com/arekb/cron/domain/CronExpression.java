@@ -8,19 +8,19 @@ import java.util.stream.Collectors;
 
 public class CronExpression {
 
-    private List<Integer> minutes;
-    private List<Integer> hours;
-    private List<Integer> days;
-    private List<Integer> months;
-    private List<Integer> daysOfWeek;
-    private String command;
+    private final List<Integer> minutes;
+    private final List<Integer> hours;
+    private final List<Integer> days;
+    private final List<Integer> months;
+    private final List<Integer> daysOfWeek;
+    private final String command;
 
     public CronExpression(Expression minutes, Expression hours, Expression days, Expression months, Expression daysOfWeek, String command) {
         this.minutes = evaluateDeduplicateSort(minutes, 0, 59);
-        this.hours = evaluateDeduplicateSort(hours, 0, 23);;
-        this.days = evaluateDeduplicateSort(days, 1, 31);;
-        this.months = evaluateDeduplicateSort(months, 1, 12);;
-        this.daysOfWeek = evaluateDeduplicateSort(daysOfWeek, 1, 7);;
+        this.hours = evaluateDeduplicateSort(hours, 0, 23);
+        this.days = evaluateDeduplicateSort(days, 1, 31);
+        this.months = evaluateDeduplicateSort(months, 1, 12);
+        this.daysOfWeek = evaluateDeduplicateSort(daysOfWeek, 1, 7);
         this.command = command;
     }
 
